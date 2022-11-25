@@ -13663,6 +13663,21 @@ Game.Launch=function()
 	}
 }
 
+/*=====================================================================================
+VIDEO PLAYER
+=======================================================================================*/
+
+function PlayVideo(path)
+{
+	fetch('http://127.0.0.1/RenderVideo?path='+path)
+	.then((response) => {
+    	return response.json();
+	})
+    .then((returnjson) => {
+    	console.log(returnjson.test);
+    });
+
+}
 
 /*=====================================================================================
 LAUNCH THIS THING
